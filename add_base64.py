@@ -2,7 +2,7 @@
 """
 Created on Fri Mar 17 22:34:20 2023
 
-@author: Administrator
+@author: HTony03
 """
 import pandas
 import configparser
@@ -14,7 +14,7 @@ def b64(name):
     tmp = b64raw.encode("utf-8")
     based = base64.b64encode(tmp)
     return based
-    
+
 
 cfg_file = r"C:\\random.cfg"
 if os.path.exists(os.path.join(os.getcwd(),cfg_file)):
@@ -30,7 +30,8 @@ else:
     print("please check the random.cfg")
     os.system("pause")
     exit()
-    
+
+
 nameall = pandas.read_csv(os.path.join(os.getcwd(),routeall),encoding="ANSI",index_col=False)
 namegirl = pandas.read_csv(os.path.join(os.getcwd(),routegirls),encoding="ANSI",index_col=False)
 nameboy = pandas.read_csv(os.path.join(os.getcwd(),routeboys),encoding="ANSI",index_col=False)
